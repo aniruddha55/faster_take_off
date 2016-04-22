@@ -1,0 +1,7 @@
+function node_sizes = increase_node_sizes(tof)
+add_gl
+pgm_input = convert_table_of_factors_to_pgm_input(tof);
+node_sizes = max(pgm_input') + 1;
+
+
+end
