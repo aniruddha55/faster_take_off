@@ -96,11 +96,13 @@ for s = 1:length(all_dep_spots)
     
     tableOfFactors_data = tableOfFactors_data_train;
     size(tableOfFactors_data.spot)
-    save([tof_dir ,'/train/tableOfFactors_data_30sec_timeBin_', all_dep_spots{s}, '_train.mat'], 'tableOfFactors_data');
+    save([tof_dir ,'/train/tableOfFactors_data_no_Bin_', all_dep_spots{s}, '_train.mat'], 'tableOfFactors_data');
+    apply_binning([ tof_dir '/train'] , timeBin_size);
     
     tableOfFactors_data = tableOfFactors_data_test;
     size(tableOfFactors_data.spot)
-    save([tof_dir ,'/test/tableOfFactors_data_30sec_timeBin_', all_dep_spots{s}, '_test.mat'], 'tableOfFactors_data');
+    save([tof_dir ,'/test/tableOfFactors_data_no_Bin_', all_dep_spots{s}, '_test.mat'], 'tableOfFactors_data');
+    apply_binning([tof_dir '/test'], timeBin_size);
 end
 
 

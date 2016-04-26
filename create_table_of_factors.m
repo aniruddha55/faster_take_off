@@ -109,7 +109,8 @@ for spot_nbr = 1:length(all_dep_spots)
         end
     end
 
-    save([output_table_of_factors_dir ,type,'/tableOfFactors_data_30sec_timeBin_', spot_of_interest, '.mat'], 'tableOfFactors_data', 'runtimes')    
+    %save([output_table_of_factors_dir ,type,'/tableOfFactors_data_30sec_timeBin_', spot_of_interest, '.mat'], 'tableOfFactors_data', 'runtimes')    
+    save([output_table_of_factors_dir ,type,'/tableOfFactors_data_no_Bin_', spot_of_interest, '.mat'], 'tableOfFactors_data', 'runtimes')    
 
 end
 
